@@ -18,31 +18,31 @@ export default function Navbar() {
         </div>
         <div className="flex gap-4">
           <div 
-            className="justify-center text-base font-normal px-4 md:px-8 py-2 my-auto cursor-pointer whitespace-nowrap"
+            className="justify-center text-base font-normal px-4 md:px-8 py-2 my-auto cursor-pointer hover:text-pink-600 whitespace-nowrap"
             onClick={() => navigate('/login')}
           >
             Home
           </div>
           <div 
-            className="justify-center text-base font-normal px-4 md:px-8 py-2 my-auto cursor-pointer whitespace-nowrap"
+            className="justify-center text-base font-normal px-4 md:px-8 py-2 my-auto cursor-pointer hover:text-pink-600 whitespace-nowrap"
             onClick={() => navigate('/login')}
           >
             Sobre nós
           </div>
           <div 
-            className="justify-center text-base font-normal px-4 md:px-8 py-2 my-auto cursor-pointer whitespace-nowrap"
+            className="justify-center text-base font-normal px-4 md:px-8 py-2 my-auto cursor-pointer hover:text-pink-600 whitespace-nowrap"
             onClick={() => navigate('/login')}
           >
             Projetos
           </div>
           <div 
-            className="justify-center text-base font-normal px-4 md:px-8 py-2 my-auto cursor-pointer whitespace-nowrap"
+            className="justify-center text-base font-normal px-4 md:px-8 py-2 my-auto cursor-pointer hover:text-pink-600 whitespace-nowrap"
             onClick={() => navigate('/login')}
           >
             Depoimentos
           </div>
           <div 
-            className="justify-center text-base font-normal px-4 md:px-8 py-2 my-auto cursor-pointer whitespace-nowrap"
+            className="justify-center text-base font-normal px-4 md:px-8 py-2 my-auto cursor-pointer hover:text-pink-600 whitespace-nowrap"
             onClick={() => navigate('/login')}
           >
             Faça parte
