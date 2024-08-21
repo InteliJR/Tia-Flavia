@@ -5,6 +5,7 @@ import Donate from './components/Donate'
 import { useNavigate } from 'react-router-dom'
 import AboutUs from './components/AboutUs'
 import Home from './components/Home'
+import Testimonials from './components/Testimonials'
 
 export default function App() {
   const navigate = useNavigate()
@@ -13,6 +14,7 @@ export default function App() {
       <Navbar />
       <Home/>
       <AboutUs />
+      <Testimonials />
       <Donate />
       <Footer />
     </div>
