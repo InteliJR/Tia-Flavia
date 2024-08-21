@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'header': '#F2F2F2'
+        'header': '#F2F2F2',
+        'donate': '#00B5FF',
       },
     },
   },

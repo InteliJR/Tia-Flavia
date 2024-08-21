@@ -1,14 +1,21 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Donate from './components/Donate'
 import { useNavigate } from 'react-router-dom'
+import AboutUs from './components/AboutUs'
+import Home from './components/Home'
+import Testimonials from './components/Testimonials'
 
 export default function App() {
   const navigate = useNavigate()
   return (
-    <div className='font-bold text-3xl' >
+    <div className='text-md' >
       <Navbar />
-      <div className='p-44'></div>
+      <Home/>
+      <AboutUs />
+      <Testimonials />
+      <Donate />
       <Footer />
     </div>
   )

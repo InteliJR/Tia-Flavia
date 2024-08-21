@@ -7,7 +7,7 @@ export default function Footer() {
         <hr className="border-black mb-10" />
         <div className="flex justify-between gap-x-4 items-center flex-wrap">
           <div className='flex justify-start gap-x-4 items-center flex-wrap'>
-            <div className="text-sm font-normal me-4 cursor-pointer">
+            <div className="text-sm font-normal me-4">
               © 2024 · Todos os direitos reservados.
             </div>
             <div className="text-sm font-normal underline cursor-pointer">
