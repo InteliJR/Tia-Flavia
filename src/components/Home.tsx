@@ -1,6 +1,12 @@
 import React from 'react'
 
 export default function Home() {
+
+  const handleRedirect = () => {
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeYUBS9MSnIGuPOTORnDsxnVpWVPVOJ4oeHyGztzyKJv1xZgQ/viewform?usp=sf_link";
+  };
+
+
   return (
     <div className='bg-[#EE8DB3] flex items-center justify-center p-6'>
       <div className='flex flex-col py-20 px-10'>
@@ -15,7 +21,7 @@ export default function Home() {
 
         <div className='flex items-center justify-left py-6'>
           <div>
-            <button type='submit' className='bg-[#DB247C] rounded-full text-white py-2 px-6'>
+            <button type='submit' className='bg-[#DB247C] rounded-full text-white py-2 px-6' onClick={handleRedirect}>
               Faça parte!
             </button>
           </div>
