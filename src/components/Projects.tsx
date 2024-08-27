@@ -3,6 +3,15 @@ import React from 'react';
 export default function Projects() {
   return (
     <div className="w-full h-full px-[120px] py-[72px] bg-[#F5F5F5] flex flex-col justify-start items-center gap-[80px] inline-flex">
+      {/* Imagens de Esferas de Decoração */}
+      <div className="absolute" style={{ left: '294px', top: '97px' }}>
+        <img
+          src='/sphere1.svg'  // Caminho para a primeira esfera
+          alt="Esfera de Decoração"
+          className="w-16 h-16"  // Ajuste o tamanho conforme necessário
+        />
+      </div>
+
       <div className="text-center">
         <h2 className="font-bold text-4xl text-[48px]">
           Projetos
@@ -118,6 +127,7 @@ export default function Projects() {
           </div>
         </button>
       </div>
+      <img src='/arrow.svg' alt="Arrow"/>
     </div>
   );
 }
