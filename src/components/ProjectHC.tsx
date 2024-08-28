@@ -13,7 +13,7 @@ interface ProjectHCProps {
 
 const ProjectHC: React.FC<ProjectHCProps> = ({ title, description, criteria, imageSrc, stats }) => {
   return (
-    <div className="bg-[#f4f4f4]">
+    <div className="relative bg-[#f4f4f4] min-h-screen overflow-hidden">
       <div className="w-full max-w-[1083px] h-auto px-16 py-8 bg-[#f4f4f4] rounded-[15px] shadow border-4 border-[#11b3f8] flex flex-col md:flex-row justify-center items-center gap-4">
         {/* Informação Principal */}
         <div className="flex-1 flex flex-col justify-center items-start gap-4">
@@ -24,7 +24,6 @@ const ProjectHC: React.FC<ProjectHCProps> = ({ title, description, criteria, ima
           <div className="w-full flex flex-col justify-start items-start gap-2">
             <h3 className="text-[#11b3f8] text-base font-semibold font-['Poppins'] leading-normal">Critérios para atendimento:</h3>
             <ul className="list-disc pl-5 text-[#141414] text-base font-normal font-['Poppins'] leading-normal">
-              {/* Abaixo você pode substituir os itens da lista pelo seu conteúdo dinâmico */}
               <li dangerouslySetInnerHTML={{ __html: criteria}} />
             </ul>
           </div>
@@ -44,15 +43,7 @@ const ProjectHC: React.FC<ProjectHCProps> = ({ title, description, criteria, ima
         </div>
       </div>
 
-      {/* Esferas de Decoração */}
-      {/* <div className="flex flex-wrap justify-center items-center gap-4">
-        <div className="w-[30px] h-[30px] bg-[#74d3fb] rounded-full" />
-        <div className="w-10 h-10 bg-[#ee8db3] rounded-full" />
-        <div className="w-[30px] h-[30px] bg-[#74d3fb] rounded-full" />
-        <div className="w-[50px] h-[50px] bg-[#196ca8] rounded-full" />
-        <div className="w-[65px] h-[65px] bg-[#db247c] rounded-full" />
-        <div className="w-10 h-10 bg-[#ee8db3] rounded-full" />
-      </div> */}
+     
     </div>
   );
 };
