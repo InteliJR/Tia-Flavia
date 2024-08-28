@@ -21,10 +21,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="https://www.facebook.com" className="font-bold hover:text-gray-800">
-              <FaFacebookF size={18} />
-            </a>
-            <a href="https://www.instagram.com" className="font-bold hover:text-gray-800">
+            <a href="https://www.instagram.com/institutotiaflavia/" className="font-bold hover:text-gray-800">
               <FaInstagram size={18} />
             </a>
           </div>
