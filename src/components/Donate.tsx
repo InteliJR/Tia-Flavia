@@ -24,7 +24,7 @@ export default function Donate() {
               </button>
           </div>
 
-          <div className="flex flex-col justify-center items-center py-16 lg:py-32 px-8 lg:px-16 rounded-[40px] border-r-[1px] border-t-[1px] border-b-[1px] border-white    text-center lg:text-left lg:w-[40%]">
+          <div className="flex flex-col justify-center items-center py-16 lg:py-32 px-8 lg:px-16 rounded-[40px] border-r-[1px] border-t-[1px] border-b-[1px] border-header    text-center lg:text-left lg:w-[40%]">
             <p className="text-white font-bold mb-4 text-lg lg:text-xl">
               Quer se tornar um voluntário?
             </p>
