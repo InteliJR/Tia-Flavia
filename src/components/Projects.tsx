@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';import Sphere from './Sphere'; // Importando o componente Sphere
+import ProjectHC from './ProjectHC';
 
 export default function Projects() {
+  // Estado para controlar a exibição do UpdatedComponent
+  const [showUpdatedComponent, setShowUpdatedComponent] = useState(false);
+
+  // Função para lidar com o clique do primeiro botão
+  const handleFirstButtonClick = () => {
+    setShowUpdatedComponent(true); // Exibe o UpdatedComponent
+  };
+
   return (
     <div className="w-full h-full px-[120px] py-[72px] bg-[#F5F5F5] flex flex-col justify-start items-center gap-[80px] inline-flex">
-      {/* Imagens de Esferas de Decoração */}
-      <div className="absolute" style={{ left: '294px', top: '97px' }}>
-        <img
-          src='/sphere1.svg'  // Caminho para a primeira esfera
-          alt="Esfera de Decoração"
-          className="w-16 h-16"  // Ajuste o tamanho conforme necessário
-        />
-      </div>
-
       <div className="text-center">
         <h2 className="font-bold text-4xl text-[48px]">
           Projetos
@@ -19,7 +19,7 @@ export default function Projects() {
       </div>
       <div className="flex justify-center items-start gap-12 w-full">
         {/* Botão 1 */}
-        <button className="relative flex-1 flex flex-col justify-center items-center gap-6 inline-flex focus:outline-none group">
+        <button className="relative flex-1 flex flex-col justify-center items-center gap-6 inline-flex focus:outline-none group" onClick={handleFirstButtonClick}>
           <div className="w-[248px] h-[250px] bg-[#F2F2F2] rounded-[10px] border border-[#141414] flex flex-col justify-center items-center gap-6 group-hover:bg-[#11B4F8] transition-colors">
             <div className="relative w-[48px] h-[48px]">
               <img
@@ -128,6 +128,9 @@ export default function Projects() {
         </button>
       </div>
       <img src='/arrow.svg' alt="Arrow"/>
+      {/* Renderiza o UpdatedComponent se o estado showUpdatedComponent for true */}
+      {showUpdatedComponent && <ProjectHC />}
+      
     </div>
   );
 }
