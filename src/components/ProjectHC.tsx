@@ -1,38 +1,46 @@
 import React from 'react';
 
-export default function Project() {
+interface ProjectHCProps {
+  title: string;
+  description: string;
+  criteria: string;
+  imageSrc: string;
+  stats: {
+    amount: string;
+    description: string;
+  };
+}
+
+const ProjectHC: React.FC<ProjectHCProps> = ({ title, description, criteria, imageSrc, stats }) => {
   return (
-    <div className="#f4f4f4">
+    <div className="bg-[#f4f4f4]">
       <div className="w-full max-w-[1083px] h-auto px-16 py-8 bg-[#f4f4f4] rounded-[15px] shadow border-4 border-[#11b3f8] flex flex-col md:flex-row justify-center items-center gap-4">
         {/* Informação Principal */}
         <div className="flex-1 flex flex-col justify-center items-start gap-4">
           <div className="w-full flex flex-col justify-start items-start gap-3">
-            <h2 className="text-[#11b3f8] text-2xl md:text-3xl font-bold font-['Poppins'] leading-tight">Hora de Comer</h2>
-            <p className="text-[#141414] text-base font-normal font-['Poppins'] leading-normal">
-              Atendimento emergencial com cestas básicas e kit de alimentos de pronto consumo.
-            </p>
+            <h2 className="text-[#11b3f8] text-2xl md:text-3xl font-bold font-['Poppins'] leading-tight">{title}</h2>
+            <p className="text-[#141414] text-base font-normal font-['Poppins'] leading-normal" dangerouslySetInnerHTML={{ __html: description }} />
           </div>
           <div className="w-full flex flex-col justify-start items-start gap-2">
             <h3 className="text-[#11b3f8] text-base font-semibold font-['Poppins'] leading-normal">Critérios para atendimento:</h3>
-            <p className="text-[#141414] text-base font-normal font-['Poppins'] leading-normal">
-              Durante as visitas às famílias<br />
-              Através de encaminhamentos por líderes comunitários<br />
-              Por solicitação das famílias, via canal de comunicação direto com o Instituto.
-            </p>
+            <ul className="list-disc pl-5 text-[#141414] text-base font-normal font-['Poppins'] leading-normal">
+              {/* Abaixo você pode substituir os itens da lista pelo seu conteúdo dinâmico */}
+              <li dangerouslySetInnerHTML={{ __html: criteria}} />
+            </ul>
           </div>
         </div>
-        
+
         {/* Estatísticas */}
         <div className="flex-1 flex flex-col justify-center items-center gap-3">
           <div className="text-center">
-            <div className="text-[#11b3f8] text-4xl md:text-5xl font-bold font-['Poppins'] leading-tight">+600 kg</div>
-            <p className="text-[#111111] text-xl font-normal font-['Poppins'] leading-9">de alimentos doados todos os meses</p>
+            <div className="text-[#11b3f8] text-4xl md:text-5xl font-bold font-['Poppins'] leading-tight">{stats.amount}</div>
+            <p className="text-[#111111] text-xl font-normal font-['Poppins'] leading-9">{stats.description}</p>
           </div>
         </div>
 
         {/* Imagem */}
         <div className="flex-1">
-          <img className="w-full max-w-[286px] h-auto rounded-[20px]" src="/horaDeComer.jpg" alt="Placeholder" />
+          <img className="w-full max-w-[286px] h-auto rounded-[20px]" src={imageSrc} alt={title} />
         </div>
       </div>
 
@@ -47,4 +55,6 @@ export default function Project() {
       </div> */}
     </div>
   );
-}
+};
+
+export default ProjectHC;
