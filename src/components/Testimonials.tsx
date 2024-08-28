@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Testimonials() {
   return (
     <div className="w-full min-h-screen px-4 py-12 lg:px-[120px] lg:py-[72px] bg-[#EE8DB3] flex flex-col justify-center items-center gap-6 lg:gap-[80px]">

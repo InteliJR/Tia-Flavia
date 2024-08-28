@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function AboutUs() {
   return (
     <div className='bg-[#74D3FB] flex flex-col md:flex-row text-2xl gap-x-8 md:gap-x-24 items-center justify-center py-12 px-6'>
