@@ -11,7 +11,7 @@ import Projects from './components/Projects'
 export default function App() {
   const navigate = useNavigate()
   return (
-    <div className='text-md' >
+    <div className='text-md w-screen' >
       <Navbar />
       <Home/>
       <AboutUs />

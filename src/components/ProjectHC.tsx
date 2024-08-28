@@ -13,7 +13,7 @@ interface ProjectHCProps {
 
 const ProjectHC: React.FC<ProjectHCProps> = ({ title, description, criteria, imageSrc, stats }) => {
   return (
-    <div className="relative bg-[#f4f4f4] min-h-screen overflow-hidden">
+    <div className="relative bg-[#f4f4f4] min-h-screen overflow-hidden z-40">
       <div className="w-full max-w-[1083px] h-auto px-16 py-8 bg-[#f4f4f4] rounded-[15px] shadow border-4 border-[#11b3f8] flex flex-col md:flex-row justify-center items-center gap-4">
         {/* Informação Principal */}
         <div className="flex-1 flex flex-col justify-center items-start gap-4">
