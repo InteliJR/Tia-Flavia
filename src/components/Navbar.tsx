@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
@@ -28,7 +28,7 @@ export default function Navbar() {
 
         {/* Hamburger menu button */}
         <div className="md:hidden z-30">
-          <button onClick={toggleMenu} className={`text-pink-600 focus:outline-none`}>
+          <button onClick={toggleMenu} className="text-pink-600 focus:outline-none">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -47,7 +47,7 @@ export default function Navbar() {
         </div>
 
         {/* Menu items */}
-        <div className={`fixed top-0 left-0 w-full h-full bg-white transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:relative md:flex md:gap-4 md:translate-x-0 z-10`}>
+        <div className={`fixed top-0 left-0 w-full h-full md:h-auto transition-transform transform ${isOpen ? 'translate-x-0 bg-white' : 'translate-x-full'} md:bg-transparent md:relative md:flex md:gap-4 md:translate-x-0 z-10`}>
           <div className="flex flex-col justify-center items-center h-full md:h-auto md:flex-row md:justify-end gap-8 md:gap-4">
             <div 
               className="text-black text-2xl md:text-base font-normal px-8 py-2 cursor-pointer hover:text-pink-600"
