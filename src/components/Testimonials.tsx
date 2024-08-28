@@ -53,7 +53,7 @@ export default function Testimonials() {
 
           <div className="px-6 py-4 bg-[#D9D9D9] rounded-[10px] text-center lg:text-left">
             <h2 className="text-[#111111] text-[18px] lg:text-[20px] font-poppins font-bold leading-[28px] break-words">
-              “A tia Flávia deu uma nova boneca pra minha irmã e um carrinho pra mim. Agora a gente pode brincar, tô muito feliz com os brinquedos.”
+              “A tia Flávia deu uma nova boneca pra minha irmã e um carrinho pra mim. Amei muito meu carrinho!.”
             </h2>
           </div>
           <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start gap-2 lg:gap-4">

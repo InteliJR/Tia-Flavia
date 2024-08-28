@@ -9,7 +9,7 @@ import Projects from './components/Projects';
 export default function App() {
 
   return (
-    <div className='text-md w-screen'>
+    <div className='text-md max-w-screen overflow-y-hidden'>
       <Navbar />
       <section id="home">
         <Home />

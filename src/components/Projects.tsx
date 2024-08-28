@@ -65,7 +65,7 @@ export default function Projects() {
   const currentContent = selectedProject !== null ? projectContents[selectedProject] : null;
 
   return (
-    <div className="relative w-full min-h-screen px-4 py-12 lg:px-[120px] lg:py-[72px] bg-[#F5F5F5] flex flex-col justify-start items-center gap-6 lg:gap-[80px]">
+    <div className="relative w-full min-h-screen px-4 py-12 lg:px-[120px] lg:py-[72px] bg-[#F5F5F5] flex flex-col justify-center items-center gap-6 lg:gap-[80px]">
       <div className="text-center z-20">
         <h2 className="font-bold text-3xl lg:text-4xl text-[48px]">Projetos</h2>
       </div>
