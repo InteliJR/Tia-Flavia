@@ -7,23 +7,22 @@ import Testimonials from './components/Testimonials';
 import Projects from './components/Projects';
 
 export default function App() {
-
   return (
     <div className='text-md w-screen'>
       <Navbar />
-      <section id="home">
+      <section id="home" className="min-h-screen lg:min-h-screen">
         <Home />
       </section>
-      <section id="about">
+      <section id="about" className="min-h-screen lg:min-h-screen">
         <AboutUs />
       </section>
-      <section id="projects">
+      <section id="projects" className="min-h-screen lg:min-h-screen">
         <Projects />
       </section>
-      <section id="testimonials">
+      <section id="testimonials" className="min-h-screen lg:min-h-screen">
         <Testimonials />
       </section>
-      <section id="donate">
+      <section id="donate" className="min-h-screen lg:min-h-screen">
         <Donate />
       </section>
       <Footer />
