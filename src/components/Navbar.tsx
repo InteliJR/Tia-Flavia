@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type SectionId = 'home' | 'about' | 'projects' | 'testimonials' | 'donate';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -17,9 +19,34 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // User is scrolling down and has passed 100px from the top
+        setIsVisible(false);
+      } else {
+        // User is scrolling up
+        setIsVisible(true);
+      }
+      setLastScrollTop(scrollTop);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollTop]);
+
   return (
     <div>
-      <header className="flex justify-between items-center p-6 md:px-36 bg-header relative z-20">
+      <header
+        className={`fixed top-0 left-0 w-full p-6 md:px-36 bg-header z-20 transition-transform duration-300 ${
+          isVisible ? 'transform translate-y-0' : 'transform -translate-y-full'
+        }`}
+      >
         {!isOpen && (
           <div 
             className="flex gap-5 justify-between w-full whitespace-nowrap max-w-[1265px] md:max-w-full"
