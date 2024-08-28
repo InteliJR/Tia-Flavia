@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <div className='bg-[#74D3FB] flex flex-col md:flex-row text-2xl gap-x-8 md:gap-x-24 items-center justify-center py-12 px-6'>
+    <div className='bg-[#74D3FB] flex flex-col md:flex-row text-2xl gap-x-8 md:gap-x-24 min-h-screen items-center justify-center py-12 px-6'>
       <div className='w-full md:w-2/5 mb-8 md:mb-0'>
         <img src="/logo_tia_flavia.png" alt="Logo" className="w-full max-w-sm mx-auto" />
       </div>

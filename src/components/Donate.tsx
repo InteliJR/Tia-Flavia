@@ -6,7 +6,7 @@ export default function Donate() {
 
   return (
     <div>
-      <div className="flex flex-col justify-center items-center p-6 md:px-36 bg-donate">
+      <div className="flex flex-col justify-center items-center min-h-screen p-6 md:px-36 bg-donate">
         <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center py-16 text-white w-full text-center lg:text-left">
           <p className="text-3xl md:text-5xl">Faça parte como doador!</p>
         </div>
