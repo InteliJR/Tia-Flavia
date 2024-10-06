@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ProjectHC from './ProjectHC'; // Importando o componente ProjectHC
 
 interface ProjectContent {
@@ -65,18 +65,18 @@ export default function Projects() {
   const currentContent = selectedProject !== null ? projectContents[selectedProject] : null;
 
   return (
-    <div className="w-full h-full px-[120px] py-[72px] bg-[#F5F5F5] flex flex-col justify-start items-center gap-[80px] inline-flex">
-      <div className="text-center">
-        <h2 className="font-bold text-4xl text-[48px]">Projetos</h2>
+    <div className="relative w-full min-h-screen px-4 py-12 lg:px-[120px] lg:py-[72px] bg-[#F5F5F5] flex flex-col justify-center items-center gap-6 lg:gap-[80px]">
+      <div className="text-center z-20">
+        <h2 className="font-bold text-3xl lg:text-4xl text-[48px]">Projetos</h2>
       </div>
-      <div className="flex justify-center items-start gap-12 w-full">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-12 w-full z-20">
         {Object.keys(projectContents).map((key) => {
           const projectId = Number(key);
           const content = projectContents[projectId];
           return (
             <button
               key={projectId}
-              className="relative flex-1 flex flex-col justify-center items-center gap-6 inline-flex focus:outline-none group"
+              className="relative flex-1 flex flex-col justify-center items-center gap-6 focus:outline-none group z-20"
               onClick={() => handleButtonClick(projectId)}
             >
               <div className="w-[248px] h-[250px] bg-[#F2F2F2] rounded-[10px] border border-[#141414] flex flex-col justify-center items-center gap-6 group-hover:bg-[#11B4F8] transition-colors">
@@ -114,6 +114,22 @@ export default function Projects() {
           stats={currentContent.stats}
         />
       )}
+
+      {/* Esferas de Decoração */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-10">
+        <div className="absolute w-[30px] h-[30px] bg-[#74d3fb] rounded-full" style={{ top: '8%', left: '5%' }} />
+        <div className="absolute w-10 h-10 bg-[#ee8db3] rounded-full" style={{ top: '12%', left: '70%' }} />
+        <div className="absolute w-[30px] h-[30px] bg-[#74d3fb] rounded-full" style={{ top: '35%', left: '15%' }} />
+        <div className="absolute w-[50px] h-[50px] bg-[#196ca8] rounded-full" style={{ top: '50%', left: '75%' }} />
+        <div className="absolute w-[65px] h-[65px] bg-[#db247c] rounded-full" style={{ top: '78%', left: '35%' }} />
+        <div className="absolute w-10 h-10 bg-[#ee8db3] rounded-full" style={{ top: '60%', left: '20%' }} />
+        <div className="absolute w-[30px] h-[30px] bg-[#74d3fb] rounded-full" style={{ top: '10%', left: '90%' }} />
+        <div className="absolute w-10 h-10 bg-[#ee8db3] rounded-full" style={{ top: '20%', left: '80%' }} />
+        <div className="absolute w-[30px] h-[30px] bg-[#74d3fb] rounded-full" style={{ top: '45%', left: '10%' }} />
+        <div className="absolute w-[50px] h-[50px] bg-[#196ca8] rounded-full" style={{ top: '55%', left: '60%' }} />
+        <div className="absolute w-[65px] h-[65px] bg-[#db247c] rounded-full" style={{ top: '85%', left: '25%' }} />
+        <div className="absolute w-10 h-10 bg-[#ee8db3] rounded-full" style={{ top: '68%', left: '30%' }} />
+      </div>
     </div>
   );
 }
