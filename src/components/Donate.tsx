@@ -49,13 +49,13 @@ export default function Donate() {
           </div>
 
           {/* Second Card */}
-          <div className="flex flex-col justify-between items-center py-10 px-8 lg:px-12 rounded-[40px] border-r-[1px] border-t-[1px] border-b-[1px] border-header text-center lg:text-left lg:w-[40%]">
-            <p className="text-white font-bold mb-4 text-lg lg:text-xl">
+          <div className="flex flex-col justify-between items-center py-10 px-8 lg:px-12 rounded-[40px] bg-[#F4EDAA] text-center lg:text-left lg:w-[40%]">
+            <p className="text-black font-bold mb-4 text-lg lg:text-xl">
               Quer se tornar um voluntário?
             </p>
             <button 
               type="submit" 
-              className="w-full py-4 bg-[#EE8DB3] text-white rounded-2xl border-[1px] border-[#E13377] hover:bg-pink-600 transition-colors"
+              className="w-full py-4 bg-[#EE8DB3] text-black rounded-2xl border-[1px] border-[#E13377] hover:bg-pink-600 transition-colors"
               onClick={handleRedirect}
             >
               Entrar!
