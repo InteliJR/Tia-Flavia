@@ -4,6 +4,17 @@ export default function Donate() {
     window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeYUBS9MSnIGuPOTORnDsxnVpWVPVOJ4oeHyGztzyKJv1xZgQ/viewform?usp=sf_link";
   };
 
+  const handleCopyPixKey = () => {
+    const pixKey = "47.287.235/0001-70";
+    navigator.clipboard.writeText(pixKey)
+      .then(() => {
+        alert("PIX key copied to clipboard!");
+      })
+      .catch(err => {
+        console.error("Failed to copy PIX key: ", err);
+      });
+  };
+
   return (
     <div>
       <div className="flex flex-col justify-center items-center min-h-screen p-6 md:px-36 bg-donate">
@@ -22,6 +33,19 @@ export default function Donate() {
               alt="Doe agora"
               className="w-full cursor-pointer"
             />
+            {/* PIX Key with Copy Functionality */}
+            <div className="relative group">
+              <p 
+                className="text-[#2E2E2E] font-semibold mt-4 cursor-pointer hover:text-gray-700"
+                onClick={handleCopyPixKey}
+              >
+                PIX: 47.287.235/0001-70
+              </p>
+              {/* Tooltip for desktop (shown on hover) */}
+              <span className="hidden lg:block absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 text-sm bg-black text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                Clique para copiar
+              </span>
+            </div>
           </div>
 
           {/* Second Card */}
