@@ -5,6 +5,7 @@ import AboutUs from './components/AboutUs';
 import Home from './components/Home';
 import Testimonials from './components/Testimonials';
 import Projects from './components/Projects';
+import Media from './components/Media';
 
 export default function App() {
 
@@ -22,6 +23,9 @@ export default function App() {
       </section>
       <section id="testimonials">
         <Testimonials />
+      </section>
+      <section id="media">
+        <Media />
       </section>
       <section id="donate">
         <Donate />
